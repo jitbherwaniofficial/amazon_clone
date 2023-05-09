@@ -16,6 +16,6 @@ mongoose.connect(process.env.CONNECTION_STRING).then(()=>{
     console.log(err);
 });
 
-app.listen(port,function () {
+app.listen(port,"0.0.0.0",function () {
     console.log(`The App is running on port: ${port}`);
 })
