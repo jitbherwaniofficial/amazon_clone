@@ -16,7 +16,7 @@ const userSchema = mongoose.Schema({
                 return value.match(re);
             },
             message: 'Please enter a valid email address',
-        }
+        },
     },
     password: {
         required: true,

@@ -17,13 +17,13 @@ router.post("/api/signup", async (req, res) => {
     let user = new User({
       email,
       password: hashedPassword,
-      name
+      name,
     })
 
     user = await user.save();
     res.status(200).json({ user: user, success: true })
   } catch (error) {
-    res.status(500).json({error : error})
+    res.status(500).json({error : error.message})
   }
 });
 
