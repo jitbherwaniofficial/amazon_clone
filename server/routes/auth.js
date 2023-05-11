@@ -21,7 +21,7 @@ router.post("/api/signup", async (req, res) => {
     })
 
     user = await user.save();
-    res.status(201).json({ user: user, success: true })
+    res.status(200).json({ user: user, success: true })
   } catch (error) {
     res.status(500).json({error : error})
   }
